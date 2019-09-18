@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
+
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -19,7 +22,18 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-
+const links = [
+  {
+    id: 0,
+    name: "Home",
+    path: "/"
+  },
+  {
+    id: 1,
+    name: "Rooms",
+    path: "/rooms"
+  }
+]
 
 export default function ButtonAppBar() {
   const classes = useStyles();
@@ -34,7 +48,11 @@ export default function ButtonAppBar() {
           <Typography variant="h6" className={classes.title}>
             News
           </Typography>
-          <Button color="inherit">Login</Button>
+          {links.map((link) => {
+            return <Link style={{textDecoration: "none", color: "inherit"}} to={link.path} key={link.id}>
+              <Button color="inherit">{link.name}</Button>
+            </Link>
+          })}
         </Toolbar>
       </AppBar>
     </div>

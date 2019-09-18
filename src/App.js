@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 
-// import AppNavbar from './components/Layout/AppNavbar';
+import AppNavbar from './components/Layout/AppNavbar';
 import AppHome from './components/Pages/AppHome';
 import AppRooms from './components/Pages/AppRooms';
 import AppSingleRooms from './components/Pages/AppSingleRooms';
@@ -38,6 +38,7 @@ const theme = createMuiTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <AppNavbar></AppNavbar>
       <Switch>
         <Route exact path="/" component={AppHome}></Route>
         <Route exact path="/rooms" component={AppRooms}></Route>
