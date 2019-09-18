@@ -46,7 +46,7 @@ export default function ButtonAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            News
+            App
           </Typography>
           {links.map((link) => {
             return <Link style={{textDecoration: "none", color: "inherit"}} to={link.path} key={link.id}>

@@ -10,6 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #666;
 }
 
 code {
@@ -19,4 +20,8 @@ code {
 
 a {
   text-decoration:none;
+}
+
+img {
+  width: 100%;
 }
