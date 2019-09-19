@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import { Route, Switch } from 'react-router-dom';
 
 import AppNavbar from './components/Layout/AppNavbar';
@@ -11,7 +11,6 @@ import AppError from './components/Pages/AppError';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 
-
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -19,6 +18,9 @@ const theme = createMuiTheme({
     },
     secondary: {
       main: "#2196f3",
+    },
+    onSecondary: {
+      main: '#FFF',
     },
     error: {
       main: "#f44336",
@@ -32,6 +34,10 @@ const theme = createMuiTheme({
     grey: {
       main: "#E5E5E5"
     }
+  },
+  typography: {
+    // Tell Material-UI what's the font-size on the html element is.
+    htmlFontSize: 10,
   },
 });
 

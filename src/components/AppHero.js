@@ -14,9 +14,13 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(1),
     textAlign: 'center',
     color: theme.palette.text.secondary,
-    height: "50vh",
+    height: "60vh",
     position: "relative",
     backgroundColor: theme.palette.grey.main
+  },
+  typography: {
+    fontWeight: "800",
+    textTransform: "uppercase"
   }
 }));
 
@@ -37,7 +41,8 @@ export default function CenteredGrid(props) {
                 title="Hero"
                 />
                 <div style={banner}>
-                    <Typography variant="body2" align="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aperiam facilis ab laboriosam.</Typography>
+                    <Typography className={classes.typography} variant="h4" align="center">{props.title}</Typography>
+                    <Typography variant="body2" align="center" style={{margin: "10px 0px"}}>{props.subtitle}</Typography>
                     {props.children}
                 </div>
           </Paper>
@@ -49,7 +54,7 @@ export default function CenteredGrid(props) {
 
 const banner = {
     width: "80%",
-    height: "30vh",
+    height: "40vh",
     backgroundColor: "rgba(255,255,255,0.9)",
     position: "absolute",
     top: 0,
