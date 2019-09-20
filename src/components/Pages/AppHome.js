@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 import AppHero from '../AppHero';
 import AppServices from '../AppServices';
+import AppFeaturesRooms from '../AppFeaturesRooms';
+
 import { makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
 
@@ -26,6 +28,7 @@ export default function AppHome() {
                 </Link>
             </AppHero>
             <AppServices></AppServices>
+            <AppFeaturesRooms></AppFeaturesRooms>
         </div>
     )
 }
